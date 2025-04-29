@@ -1,5 +1,5 @@
 # Implementing-a-Simple-Filesystem
-Note: Copy of my Temple University Repository for an assignment.
+Note: Copy of my Temple University Lab Repository.
 
 The goal of this project is to implement a simple file system on top of a virtual disk. To this end, you will implement a library of functions that offer a set of basic file system calls (such as open, read, write, ...) to applications. The file data and file system meta-information will be stored on a virtual disk. This virtual disk is a single file that is stored on the "real" file system provided by the Linux operating system. That is, you are basically implementing your file system on top of the Linux file system.
 
