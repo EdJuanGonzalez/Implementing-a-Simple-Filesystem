@@ -1,7 +1,11 @@
 # Implementing-a-Simple-Filesystem
 Note: Copy of my Temple University Repository for an assignment.
 
-The goal of this project is to implement a simple file system on top of a virtual disk.
+The goal of this project is to implement a simple file system on top of a virtual disk. To this end, you will implement a library of functions that offer a set of basic file system calls (such as open, read, write, ...) to applications. The file data and file system meta-information will be stored on a virtual disk. This virtual disk is a single file that is stored on the "real" file system provided by the Linux operating system. That is, you are basically implementing your file system on top of the Linux file system.
+
+To create and access the virtual disk, we have provided a few definitions and helper functions that you can find in this header file and this source file. Note that, in your library, you are not allowed to create any "real" files on the Linux file system itself. Instead, you must use the provided helper functions and store all the data that you need on the virtual disk. As you can see by looking at the provided header and source files, the virtual disk has 8,192 blocks, and each block holds 4KB. Using the helper files you can create an empty disk, open and close a disk, and read and write entire disk blocks (by providing a block number in the range between 0 and 8,191 inclusive).
+
+To make things easier, your file system does not have to support a directory hierarchy. Instead, all files are stored in a single root directory on the virtual disk. In addition, your file system does not have to store more than 64 files (of course, you can create and delete files, and deleted files do not count against this 64 file limit). Finally, out of the 8,192 blocks available on disk, only 4,096 must be reserved as data blocks. That is, you have ample space to store your file meta-information. However, you have to free data blocks (make them available again) when the corresponding file is deleted. The maximum file size is 16 megabytes (all 4,096 data blocks, each block with 4KB).
 
 # Project-3-S24
 ## Project 3: Implementing a Simple File System
